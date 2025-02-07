@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+const cors = require('cors'); // import cors
 const port = process.env.PORT || 4000;
+
+app.use(cors());
 // API endpoint for text
 app.get('/api/text', (req, res) => {
-  res.send('Hello, World! Welcome to my Node.js app.');
+  res.send('Hello, World! Welcome to Coole app.');
 });
 
 // Optionally, you can have a default route for the frontend
